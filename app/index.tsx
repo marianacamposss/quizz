@@ -1,8 +1,9 @@
-import React, { useState } from 'react';
-import QuizScreen from '../components/QuizScreen';
-import questions from '../questions.json';
+import React, { useState } from "react";
+import { View, Text, TouchableOpacity, StyleSheet } from "react-native";
+import QuizScreen from "../components/QuizScreen";
+import questions from "../questions.json";
 
-// Definimos o formato de um objeto de pergunta para reutilizar o tipo
+// Definimos o formato de um objeto de pergunta
 interface Question {
   question: string;
   options: string[];
@@ -16,23 +17,25 @@ interface ResultScreenProps {
   onPlayAgain: () => void;
 }
 
-// O componente ResultScreen foi adaptado para a web.
-const ResultScreen: React.FC<ResultScreenProps> = ({ score, totalQuestions, onPlayAgain }) => {
+const ResultScreen: React.FC<ResultScreenProps> = ({
+  score,
+  totalQuestions,
+  onPlayAgain,
+}) => {
   return (
-    <div className="flex flex-col items-center justify-center min-h-screen bg-gradient-to-br from-indigo-500 to-purple-600 p-4">
-      <div className="bg-white rounded-xl shadow-lg p-8 w-full max-w-sm text-center">
-        <h2 className="text-3xl font-bold text-gray-800 mb-4">Quiz Finalizado!</h2>
-        <p className="text-xl text-gray-600 mb-6">
-          Sua pontuação é de <span className="font-extrabold text-purple-600">{score}</span> de <span className="font-extrabold text-purple-600">{totalQuestions}</span>.
-        </p>
-        <button
-          onClick={onPlayAgain}
-          className="w-full bg-indigo-500 hover:bg-indigo-600 text-white font-semibold py-3 px-6 rounded-lg shadow-md transition duration-300"
-        >
-          Jogar Novamente
-        </button>
-      </div>
-    </div>
+    <View style={styles.resultContainer}>
+      <View style={styles.resultCard}>
+        <Text style={styles.resultTitle}>Quiz Finalizado!</Text>
+        <Text style={styles.resultText}>
+          Sua pontuação é de{" "}
+          <Text style={styles.resultHighlight}>{score}</Text> de{" "}
+          <Text style={styles.resultHighlight}>{totalQuestions}</Text>.
+        </Text>
+        <TouchableOpacity style={styles.resultButton} onPress={onPlayAgain}>
+          <Text style={styles.resultButtonText}>Jogar Novamente</Text>
+        </TouchableOpacity>
+      </View>
+    </View>
   );
 };
 
@@ -41,21 +44,17 @@ interface StartScreenProps {
   onStartGame: () => void;
 }
 
-// Componente para a tela inicial
 const StartScreen: React.FC<StartScreenProps> = ({ onStartGame }) => {
   return (
-    <div className="flex flex-col items-center justify-center min-h-screen bg-gradient-to-br from-blue-500 to-indigo-600 text-white p-4">
-      <div className="bg-white bg-opacity-20 backdrop-filter backdrop-blur-lg rounded-xl shadow-xl p-8 w-full max-w-md text-center">
-        <h1 className="text-5xl font-extrabold mb-4">Quiz</h1>
-        <p className="text-xl mb-8">Teste seus conhecimentos!</p>
-        <button
-          onClick={onStartGame}
-          className="bg-white text-indigo-600 font-bold py-4 px-10 rounded-full shadow-lg transition transform hover:scale-105 duration-300"
-        >
-          Iniciar Jogo
-        </button>
-      </div>
-    </div>
+    <View style={styles.startContainer}>
+      <View style={styles.startCard}>
+        <Text style={styles.startTitle}>Quiz</Text>
+        <Text style={styles.startSubtitle}>Teste seus conhecimentos!</Text>
+        <TouchableOpacity style={styles.startButton} onPress={onStartGame}>
+          <Text style={styles.startButtonText}>Iniciar Jogo</Text>
+        </TouchableOpacity>
+      </View>
+    </View>
   );
 };
 
@@ -68,7 +67,8 @@ export default function App() {
   const [score, setScore] = useState<number>(0);
   const [isQuizFinished, setIsQuizFinished] = useState<boolean>(false);
 
-  const currentQuestion: Question | null = questions.length > 0 ? questions[currentQuestionIndex] : null;
+  const currentQuestion: Question | null =
+    questions.length > 0 ? questions[currentQuestionIndex] : null;
 
   const handleOptionPress = (option: string) => {
     if (currentQuestion && option === currentQuestion.correctAnswer) {
@@ -98,7 +98,7 @@ export default function App() {
   };
 
   if (!isGameStarted) {
-      return <StartScreen onStartGame={() => setIsGameStarted(true)} />;
+    return <StartScreen onStartGame={() => setIsGameStarted(true)} />;
   }
 
   if (isQuizFinished) {
@@ -113,9 +113,11 @@ export default function App() {
 
   if (!currentQuestion) {
     return (
-      <div className="flex items-center justify-center min-h-screen">
-        <h1 className="text-3xl font-bold text-gray-800">Nenhuma pergunta encontrada. Verifique seu arquivo questions.json.</h1>
-      </div>
+      <View style={styles.errorContainer}>
+        <Text style={styles.errorText}>
+          Nenhuma pergunta encontrada. Verifique seu arquivo questions.json.
+        </Text>
+      </View>
     );
   }
 
@@ -129,3 +131,116 @@ export default function App() {
     />
   );
 }
+
+const styles = StyleSheet.create({
+  // Tela inicial
+  startContainer: {
+    flex: 1,
+    justifyContent: "center",
+    alignItems: "center",
+    padding: 16,
+    backgroundColor: "#4F46E5",
+  },
+  startCard: {
+    backgroundColor: "rgba(255,255,255,0.2)",
+    padding: 24,
+    borderRadius: 16,
+    alignItems: "center",
+    shadowColor: "#000",
+    shadowOpacity: 0.2,
+    shadowRadius: 6,
+    elevation: 5,
+  },
+  startTitle: {
+    fontSize: 40,
+    fontWeight: "900",
+    color: "#fff",
+    marginBottom: 12,
+  },
+  startSubtitle: {
+    fontSize: 18,
+    color: "#f0f0f0",
+    marginBottom: 24,
+  },
+  startButton: {
+    backgroundColor: "#fff",
+    paddingVertical: 14,
+    paddingHorizontal: 32,
+    borderRadius: 32,
+    shadowColor: "#000",
+    shadowOpacity: 0.2,
+    shadowRadius: 6,
+    elevation: 5,
+  },
+  startButtonText: {
+    color: "#4F46E5",
+    fontWeight: "bold",
+    fontSize: 18,
+  },
+
+  // Tela de resultado
+  resultContainer: {
+    flex: 1,
+    justifyContent: "center",
+    alignItems: "center",
+    padding: 16,
+    backgroundColor: "#7C3AED",
+  },
+  resultCard: {
+    backgroundColor: "#fff",
+    borderRadius: 16,
+    padding: 24,
+    width: "90%",
+    maxWidth: 350,
+    alignItems: "center",
+    shadowColor: "#000",
+    shadowOpacity: 0.25,
+    shadowRadius: 8,
+    elevation: 6,
+  },
+  resultTitle: {
+    fontSize: 28,
+    fontWeight: "bold",
+    color: "#333",
+    marginBottom: 16,
+    textAlign: "center",
+  },
+  resultText: {
+    fontSize: 20,
+    color: "#555",
+    marginBottom: 20,
+    textAlign: "center",
+  },
+  resultHighlight: {
+    fontWeight: "900",
+    color: "#7C3AED",
+  },
+  resultButton: {
+    backgroundColor: "#4F46E5",
+    paddingVertical: 14,
+    paddingHorizontal: 24,
+    borderRadius: 12,
+    marginTop: 16,
+    alignItems: "center",
+  },
+  resultButtonText: {
+    color: "#fff",
+    fontWeight: "bold",
+    fontSize: 18,
+  },
+
+  // Tela de erro
+  errorContainer: {
+    flex: 1,
+    justifyContent: "center",
+    alignItems: "center",
+    padding: 16,
+    backgroundColor: "#f8f8f8",
+  },
+  errorText: {
+    fontSize: 20,
+    fontWeight: "bold",
+    color: "#333",
+    textAlign: "center",
+  },
+});
