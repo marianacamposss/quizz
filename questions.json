@@ -1,0 +1,52 @@
+[
+  {
+    "question": "Qual é a principal função dos glóbulos vermelhos?",
+    "options": ["Combater infecções", "Transportar oxigênio", "Coagulação do sangue", "Produzir anticorpos"],
+    "correctAnswer": "Transportar oxigênio"
+  },
+  {
+    "question": "Qual é a parte do olho responsável por focar a luz na retina?",
+    "options": ["Pupila", "Íris", "Córnea", "Cristalino"],
+    "correctAnswer": "Cristalino"
+  },
+  {
+    "question": "Qual é o nome do osso localizado na coxa?",
+    "options": ["Tíbia", "Fíbula", "Fêmur", "Rádio"],
+    "correctAnswer": "Fêmur"
+  },
+  {
+    "question": "Qual vitamina é crucial para a coagulação do sangue?",
+    "options": ["Vitamina C", "Vitamina A", "Vitamina K", "Vitamina D"],
+    "correctAnswer": "Vitamina K"
+  },
+  {
+    "question": "Qual hormônio é produzido pelo pâncreas para controlar o nível de açúcar no sangue?",
+    "options": ["Adrenalina", "Insulina", "Cortisol", "Tiroxina"],
+    "correctAnswer": "Insulina"
+  },
+  {
+    "question": "Qual é o nome da estrutura que liga o músculo ao osso?",
+    "options": ["Ligamento", "Cartilagem", "Tendão", "Nervo"],
+    "correctAnswer": "Tendão"
+  },
+  {
+    "question": "Onde o coração está localizado?",
+    "options": ["Lado direito do peito", "Lado esquerdo do abdômen", "Centro do peito, levemente à esquerda", "Atrás do estômago"],
+    "correctAnswer": "Centro do peito, levemente à esquerda"
+  },
+  {
+    "question": "Qual é a principal função do sistema linfático?",
+    "options": ["Transportar nutrientes", "Eliminar toxinas", "Regular a temperatura corporal", "Proteger o corpo de infecções"],
+    "correctAnswer": "Proteger o corpo de infecções"
+  },
+  {
+    "question": "Qual é o nome da célula nervosa, a unidade básica do sistema nervoso?",
+    "options": ["Neurônio", "Glóbulo", "Macrófago", "Linfa"],
+    "correctAnswer": "Neurônio"
+  },
+  {
+    "question": "Qual é o principal componente do nosso esqueleto?",
+    "options": ["Músculos", "Tendões", "Cartilagem", "Ossos"],
+    "correctAnswer": "Ossos"
+  }
+]
