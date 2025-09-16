@@ -19,9 +19,12 @@ A interface é simples, limpa e se adapta a diferentes tamanhos de tela.
 ### Tipagem com TypeScript:
 O uso de TypeScript garante um código mais robusto e fácil de manter, identificando erros de tipo durante o desenvolvimento
 
-### Perguntas Dinâmicas: 
+### Perguntas Dinâmicas:
 As perguntas são carregadas de um arquivo questions.json, permitindo a fácil adição ou edição de novas perguntas sem alterar a lógica do código.
-<img width="500" height="780" alt="image" src="https://github.com/user-attachments/assets/7f28c399-46dd-4518-9a4d-e00554ada769" />
+
+<p align="center">
+  <img src="https://github.com/user-attachments/assets/7f28c399-46dd-4518-9a4d-e00554ada769" alt="image" width="500" height="780" />
+</p>
 
 ## 🛠️ Tecnologias Utilizadas
 ### React Native:
