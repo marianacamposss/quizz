@@ -5,17 +5,20 @@ Um aplicativo de quiz interativo e divertido, construído com React Native e Typ
 ## 🌟 Recursos Principais
 ### Fluxo de Jogo Completo: 
 A tela inicial dá as boas-vindas ao usuário, a tela do quiz exibe as perguntas e, ao final, uma tela de resultados mostra a pontuação.
+<p align="center">
 <img width="1800" height="789" alt="image" src="https://github.com/user-attachments/assets/4affa483-5f9f-41e2-b11f-8f90490db417" />
+</p>
 ### Feedback Visual e Sonoro:
 A cada resposta, o app exibe um feedback visual (✓ para acerto, ✗ para erro) e toca um som correspondente, tornando a experiência mais envolvente.
-
+<p align="center">
 <img width="400" height="750" alt="image" src="https://github.com/user-attachments/assets/e3890feb-0c63-4c42-9c7c-c1e864f160f5" /> <img width="420" height="750" alt="image" src="https://github.com/user-attachments/assets/e1ae93cb-df38-48d2-90c4-5dbe8af62667" />
+</p>
 
 ### Design Responsivo:
 A interface é simples, limpa e se adapta a diferentes tamanhos de tela.
-
+<p align="center">
 <img width="1000" height="750" alt="image" src="https://github.com/user-attachments/assets/c658e595-5b5d-4791-aa3e-a2c4c7093fdc" />
-
+</p>
 ### Tipagem com TypeScript:
 O uso de TypeScript garante um código mais robusto e fácil de manter, identificando erros de tipo durante o desenvolvimento
 
