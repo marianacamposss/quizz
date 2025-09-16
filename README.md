@@ -43,6 +43,11 @@ expo-av: Para reproduzir os sons de acerto e erro.
 
 ## 📂 Estrutura do Projeto
 O projeto é organizado de forma modular, separando a lógica de exibição em diferentes componentes:
+<p align="center">
+<img width="400" height="700" alt="image" src="https://github.com/user-attachments/assets/633e7212-5fd4-4154-9ac3-53be2bf04971" />
+</p>
+
+
 
 ### App.tsx: 
 O componente principal que gerencia o estado do jogo (tela inicial, quiz e resultados) e a navegação entre as telas.
@@ -77,7 +82,9 @@ Bash
 npm install
 ou
 yarn install
+
 Adicione os arquivos de som:
+
 Coloque os arquivos de som (som_acerto.mp3 e som_erro.wav) na pasta assets/sounds.
 
 Inicie o projeto:
@@ -85,6 +92,7 @@ Inicie o projeto:
 Bash
 
 npx expo start
+
 Acesse o aplicativo:
 
 Leia o QR code com o aplicativo Expo Go no seu celular.
