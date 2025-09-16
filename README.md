@@ -55,7 +55,9 @@ Clone o repositório:
 Bash
 
 git clone [https://github.com/marianacamposss/quizz.git]
+
 cd [pasta-do-projeto]
+
 Instale as dependências:
 
 Bash
