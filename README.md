@@ -32,13 +32,17 @@ expo-av: Para reproduzir os sons de acerto e erro.
 ## 📂 Estrutura do Projeto
 O projeto é organizado de forma modular, separando a lógica de exibição em diferentes componentes:
 
-App.tsx: O componente principal que gerencia o estado do jogo (tela inicial, quiz e resultados) e a navegação entre as telas.
+### App.tsx: 
+O componente principal que gerencia o estado do jogo (tela inicial, quiz e resultados) e a navegação entre as telas.
 
-components/QuizScreen.tsx: O componente responsável por renderizar a pergunta atual e as opções de resposta, incluindo a lógica de feedback visual e sonoro.
+### components/QuizScreen.tsx:
+O componente responsável por renderizar a pergunta atual e as opções de resposta, incluindo a lógica de feedback visual e sonoro.
 
-components/ResultScreen.tsx: Exibe a pontuação final do jogador e um botão para jogar novamente.
+### components/ResultScreen.tsx:
+Exibe a pontuação final do jogador e um botão para jogar novamente.
 
-questions.json: Onde as perguntas, opções e respostas corretas são armazenadas.
+### questions.json:
+Onde as perguntas, opções e respostas corretas são armazenadas.
 
 ## 🚀 Como Executar o Projeto
 Siga os passos abaixo para rodar o aplicativo no seu ambiente local.
