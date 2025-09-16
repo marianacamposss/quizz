@@ -76,3 +76,5 @@ Acesse o aplicativo:
 Leia o QR code com o aplicativo Expo Go no seu celular.
 
 Ou pressione a para rodar em um emulador Android ou i para um emulador iOS.
+
+### Feito por Mariana Meirelles de Campos
