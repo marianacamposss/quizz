@@ -4,7 +4,7 @@ Um aplicativo de quiz interativo e divertido, construído com React Native e Typ
 ## 🌟 Recursos Principais
 Fluxo de Jogo Completo: A tela inicial dá as boas-vindas ao usuário, a tela do quiz exibe as perguntas e, ao final, uma tela de resultados mostra a pontuação.
 
-Feedback Visual e Sonoro: A cada resposta, o app exibe um feedback visual (✓ para acerto, ✗ para erro) e toca um som correspondente, tornando a experiência mais envolvente.
+** Feedback Visual e Sonoro: A cada resposta, o app exibe um feedback visual (✓ para acerto, ✗ para erro) e toca um som correspondente, tornando a experiência mais envolvente.
 
 Design Responsivo: A interface é simples, limpa e se adapta a diferentes tamanhos de tela.
 
