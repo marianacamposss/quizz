@@ -1,50 +1,66 @@
-# Welcome to your Expo app 👋
+## 🧠 Quiz App
+Um aplicativo de quiz interativo e divertido, construído com React Native e TypeScript, que permite aos usuários testar seus conhecimentos através de perguntas dinâmicas e uma interface intuitiva.
 
-This is an [Expo](https://expo.dev) project created with [`create-expo-app`](https://www.npmjs.com/package/create-expo-app).
+## 🌟 Recursos Principais
+Fluxo de Jogo Completo: A tela inicial dá as boas-vindas ao usuário, a tela do quiz exibe as perguntas e, ao final, uma tela de resultados mostra a pontuação.
 
-## Get started
+Feedback Visual e Sonoro: A cada resposta, o app exibe um feedback visual (✓ para acerto, ✗ para erro) e toca um som correspondente, tornando a experiência mais envolvente.
 
-1. Install dependencies
+Design Responsivo: A interface é simples, limpa e se adapta a diferentes tamanhos de tela.
 
-   ```bash
-   npm install
-   ```
+Tipagem com TypeScript: O uso de TypeScript garante um código mais robusto e fácil de manter, identificando erros de tipo durante o desenvolvimento.
 
-2. Start the app
+Perguntas Dinâmicas: As perguntas são carregadas de um arquivo questions.json, permitindo a fácil adição ou edição de novas perguntas sem alterar a lógica do código.
 
-   ```bash
-   npx expo start
-   ```
+## 🛠️ Tecnologias Utilizadas
+React Native: O framework para desenvolvimento do aplicativo.
 
-In the output, you'll find options to open the app in a
+Expo: Facilitando o desenvolvimento, teste e build do app.
 
-- [development build](https://docs.expo.dev/develop/development-builds/introduction/)
-- [Android emulator](https://docs.expo.dev/workflow/android-studio-emulator/)
-- [iOS simulator](https://docs.expo.dev/workflow/ios-simulator/)
-- [Expo Go](https://expo.dev/go), a limited sandbox for trying out app development with Expo
+TypeScript: Garantindo um código mais seguro e escalável.
 
-You can start developing by editing the files inside the **app** directory. This project uses [file-based routing](https://docs.expo.dev/router/introduction).
+expo-av: Para reproduzir os sons de acerto e erro.
 
-## Get a fresh project
+## 📂 Estrutura do Projeto
+O projeto é organizado de forma modular, separando a lógica de exibição em diferentes componentes:
 
-When you're ready, run:
+App.tsx: O componente principal que gerencia o estado do jogo (tela inicial, quiz e resultados) e a navegação entre as telas.
 
-```bash
-npm run reset-project
-```
+components/QuizScreen.tsx: O componente responsável por renderizar a pergunta atual e as opções de resposta, incluindo a lógica de feedback visual e sonoro.
 
-This command will move the starter code to the **app-example** directory and create a blank **app** directory where you can start developing.
+components/ResultScreen.tsx: Exibe a pontuação final do jogador e um botão para jogar novamente.
 
-## Learn more
+questions.json: Onde as perguntas, opções e respostas corretas são armazenadas.
 
-To learn more about developing your project with Expo, look at the following resources:
+## 🚀 Como Executar o Projeto
+Siga os passos abaixo para rodar o aplicativo no seu ambiente local.
 
-- [Expo documentation](https://docs.expo.dev/): Learn fundamentals, or go into advanced topics with our [guides](https://docs.expo.dev/guides).
-- [Learn Expo tutorial](https://docs.expo.dev/tutorial/introduction/): Follow a step-by-step tutorial where you'll create a project that runs on Android, iOS, and the web.
+Pré-requisitos
+Certifique-se de ter o Node.js e o npm (ou yarn) instalados.
 
-## Join the community
+Clone o repositório:
 
-Join our community of developers creating universal apps.
+Bash
 
-- [Expo on GitHub](https://github.com/expo/expo): View our open source platform and contribute.
-- [Discord community](https://chat.expo.dev): Chat with Expo users and ask questions.
+git clone [URL_DO_SEU_REPOSITORIO]
+cd [pasta-do-projeto]
+Instale as dependências:
+
+Bash
+
+npm install
+# ou
+yarn install
+Adicione os arquivos de som:
+Coloque os arquivos de som (som_acerto.mp3 e som_erro.wav) na pasta assets/sounds.
+
+Inicie o projeto:
+
+Bash
+
+npx expo start
+Acesse o aplicativo:
+
+Leia o QR code com o aplicativo Expo Go no seu celular.
+
+Ou pressione a para rodar em um emulador Android ou i para um emulador iOS.
