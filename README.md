@@ -23,7 +23,6 @@ O uso de TypeScript garante um código mais robusto e fácil de manter, identifi
 As perguntas são carregadas de um arquivo questions.json, permitindo a fácil adição ou edição de novas perguntas sem alterar a lógica do código.
 <img width="500" height="780" alt="image" src="https://github.com/user-attachments/assets/7f28c399-46dd-4518-9a4d-e00554ada769" />
 
-
 ## 🛠️ Tecnologias Utilizadas
 ### React Native:
 O framework para desenvolvimento do aplicativo.
